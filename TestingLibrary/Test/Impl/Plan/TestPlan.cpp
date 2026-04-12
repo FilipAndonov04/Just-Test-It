@@ -6,7 +6,7 @@ namespace Test {
 
 void TestPlan::addTestCase(const char* suiteName, const char* caseName, void(*caseImpl)()) {
     for (auto& suite : suites) {
-        if (suite.getName() == suiteName) {
+        if (std::strcmp(suite.getName(), suiteName) == 0) {
             suite.addTestCase(caseName, caseImpl);
             return;
         }
@@ -18,7 +18,7 @@ void TestPlan::addTestCase(const char* suiteName, const char* caseName, void(*ca
 
 const TestSuite* TestPlan::getTestSuite(const char* suiteName) const {
     for (auto& suite : suites) {
-        if (suite.getName() == suiteName) {
+        if (std::strcmp(suite.getName(), suiteName) == 0) {
             return &suite;
         }
     }
@@ -27,7 +27,7 @@ const TestSuite* TestPlan::getTestSuite(const char* suiteName) const {
 
 TestSuite* TestPlan::getTestSuite(const char* suiteName) {
     for (auto& suite : suites) {
-        if (suite.getName() == suiteName) {
+        if (std::strcmp(suite.getName(), suiteName) == 0) {
             return &suite;
         }
     }

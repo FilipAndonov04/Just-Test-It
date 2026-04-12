@@ -17,7 +17,7 @@ unsigned TestSuite::totalTests() const {
 
 const TestCase* TestSuite::getTestCase(const char* caseName) const {
     for (auto& c : cases) {
-        if (c.getName() == caseName) {
+        if (std::strcmp(c.getName(), caseName) == 0) {
             return &c;
         }
     }
@@ -26,7 +26,7 @@ const TestCase* TestSuite::getTestCase(const char* caseName) const {
 
 TestCase* TestSuite::getTestCase(const char* caseName) {
     for (auto& c : cases) {
-        if (c.getName() == caseName) {
+        if (std::strcmp(c.getName(), caseName) == 0) {
             return &c;
         }
     }
