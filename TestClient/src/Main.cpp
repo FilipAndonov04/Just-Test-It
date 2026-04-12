@@ -16,6 +16,6 @@ TEST_CASE(Ptr, Null) {
 
 TEST_MAIN() {
 	Test::runAllTests();
-	Test::runSuiteTests("FuncGood");
-	Test::runSuiteTests("FuncBad");
+	// Test::runSuiteTests("FuncGood");
+	// Test::runSuiteTests("FuncBad");
 }

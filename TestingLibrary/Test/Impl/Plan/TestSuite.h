@@ -17,10 +17,10 @@ public:
 
 	void addTestCase(const char* caseName, void(*caseImpl)());
 	
-	unsigned run() const;
+	TestResult run() const;
 
 private:
-	unsigned runTests() const;
+	TestResult runTests() const;
 
 	const char* name;
 	std::vector<TestCase> cases;

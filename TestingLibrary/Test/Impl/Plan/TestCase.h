@@ -1,4 +1,5 @@
 #pragma once
+#include "Impl/Plan/TestResult.h"
 
 namespace Test {
 
@@ -8,7 +9,7 @@ public:
 
 	const char* getName() const;
 
-	bool run() const;
+	TestResult run() const;
 
 private:
 	const char* name;

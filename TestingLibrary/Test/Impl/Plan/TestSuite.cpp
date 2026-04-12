@@ -12,7 +12,7 @@ const char* TestSuite::getName() const {
 }
 
 unsigned TestSuite::totalTests() const {
-    return cases.size();
+    return static_cast<unsigned>(cases.size());
 }
 
 const TestCase* TestSuite::getTestCase(const char* caseName) const {
@@ -37,30 +37,28 @@ void TestSuite::addTestCase(const char* caseName, void(*caseImpl)()) {
     cases.emplace_back(caseName, caseImpl);
 }
 
-unsigned TestSuite::run() const {
+TestResult TestSuite::run() const {
     logTabbed("[TEST SUITE] %s tests are running\n", name);
     incrementLogTabs();
 
-    TestTimer timer;
-    unsigned passed = runTests();
-    auto duration = timer.getTimePassedMs();
+    TestResult result = runTests();
     unsigned total = totalTests();
     
     decrementLogTabs();
-    setConsoleColour(passed == total ? ConsoleColour::Green : ConsoleColour::Red);
+    setConsoleColour(result.getPassed() == total ? ConsoleColour::Green : ConsoleColour::Red);
     logTabbed("[TEST SUITE] %s tests passed %u/%u (%ums)\n", 
-              name, passed, total, duration);
+              name, result.getPassed(), total, result.getDurationMs());
     setConsoleColour(ConsoleColour::Default);
 
-    return passed;
+    return result;
 }
 
-unsigned TestSuite::runTests() const {
-    unsigned passed = 0;
+TestResult TestSuite::runTests() const {
+    TestResult result{};
     for (auto& c : cases) {
-        passed += c.run();
+        result += c.run();
     }
-    return passed;
+    return result;
 }
 
 }

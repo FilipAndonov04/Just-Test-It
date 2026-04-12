@@ -14,10 +14,10 @@ public:
 
 	void addTestCase(const char* suiteName, const char* caseName, void(*caseImpl)());
 
-	unsigned run() const;
+	TestResult run() const;
 
 private:
-	unsigned runTests() const;
+	TestResult runTests() const;
 
 	std::vector<TestSuite> suites;
 };

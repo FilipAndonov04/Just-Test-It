@@ -60,30 +60,28 @@ unsigned TestPlan::totalTests() const {
     return total;
 }
 
-unsigned TestPlan::run() const {
+TestResult TestPlan::run() const {
     logTabbed("[ALL TESTS] tests are running\n");
     incrementLogTabs();
 
-    TestTimer timer;
-    unsigned passed = runTests();
-    auto duration = timer.getTimePassedMs();
+    TestResult result = runTests();
     unsigned total = totalTests();
 
     decrementLogTabs();
-    setConsoleColour(passed == total ? ConsoleColour::Green : ConsoleColour::Red);
+    setConsoleColour(result.getPassed() == total ? ConsoleColour::Green : ConsoleColour::Red);
     logTabbed("[ALL TESTS] tests passed %u/%u (%ums)\n", 
-              passed, total, duration);
+              result.getPassed(), total, result.getDurationMs());
     setConsoleColour(ConsoleColour::Default);
 
-    return passed;
+    return result;
 }
 
-unsigned TestPlan::runTests() const {
-    unsigned passed = 0;
+TestResult TestPlan::runTests() const {
+    TestResult result{};
     for (const auto& suite : suites) {
-        passed += suite.run();
+        result += suite.run();
     }
-    return passed;
+    return result;
 }
 
 }

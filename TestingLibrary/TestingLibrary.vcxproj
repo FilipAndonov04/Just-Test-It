@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Test\Impl\Plan\TestResult.cpp" />
     <ClCompile Include="Test\Impl\Register\TestRegister.cpp" />
     <ClCompile Include="Test\Impl\Register\TestRegistration.cpp" />
     <ClCompile Include="Test\Impl\Timer\TestTimer.cpp" />
@@ -32,6 +33,7 @@
   <ItemGroup>
     <ClInclude Include="Test\Asserts.h" />
     <ClInclude Include="Test\EntryPoint.h" />
+    <ClInclude Include="Test\Impl\Plan\TestResult.h" />
     <ClInclude Include="Test\Impl\Register\TestRegister.h" />
     <ClInclude Include="Test\Impl\Register\TestRegistration.h" />
     <ClInclude Include="Test\Impl\Timer\TestTimer.h" />

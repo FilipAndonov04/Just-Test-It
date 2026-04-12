@@ -12,7 +12,7 @@ const char* TestCase::getName() const {
     return name;
 }
 
-bool TestCase::run() const {
+TestResult TestCase::run() const {
     TestTimer timer;
     try {
         impl();
@@ -23,7 +23,7 @@ bool TestCase::run() const {
                   name, duration);
         resetConsoleColour();
 
-        return true;
+        return TestResult{true, duration};
     } catch (const TestFailedException& e) {
         auto duration = timer.getTimePassedMs();
 
@@ -32,7 +32,7 @@ bool TestCase::run() const {
                   name, e.getFile(), e.getLine(), duration, e.what());
         resetConsoleColour();
 
-        return false;
+        return TestResult{false, duration};
     }
 }
 

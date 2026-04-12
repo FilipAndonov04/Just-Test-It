@@ -8,11 +8,11 @@ namespace Test {
 static bool allTestsPassed = true;
 
 bool runAllTests() {
-	unsigned passed = getTestRegister().run();
+	TestResult result = getTestRegister().run();
 	log("\n");
 
 	unsigned total = getTestRegister().totalTests();
-	allTestsPassed &= passed == total;
+	allTestsPassed &= result.getPassed() == total;
 	return allTestsPassed;
 }
 
@@ -27,11 +27,11 @@ bool runSuiteTests(const char* testSuite) {
 		return false;
 	}
 
-	unsigned passed = s->run();
+	TestResult result = s->run();
 	log("\n");
 
 	unsigned total = s->totalTests();
-	allTestsPassed &= passed == total;
+	allTestsPassed &= result.getPassed() == total;
 	return allTestsPassed;
 }
 
@@ -47,7 +47,8 @@ bool runTestCase(const char* testSuite, const char* testCase) {
 		return false;
 	}
 
-	allTestsPassed &= c->run();
+	TestResult result = c->run();
+	allTestsPassed &= result.getPassed() != 0;
 	log("\n");
 
 	return allTestsPassed;
