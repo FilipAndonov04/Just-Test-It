@@ -1,5 +1,7 @@
 #pragma once
 
+namespace Test {
+
 class TestResult {
 public:
     TestResult() = default;
@@ -14,3 +16,5 @@ private:
     unsigned passed = 0;
     unsigned long long durationMs = 0;
 };
+
+}

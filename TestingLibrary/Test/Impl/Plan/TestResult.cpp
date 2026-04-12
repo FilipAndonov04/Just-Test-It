@@ -1,5 +1,7 @@
 #include "TestResult.h"
 
+namespace Test {
+
 TestResult::TestResult(unsigned passed, unsigned long long durationMs) 
     : passed(passed), durationMs(durationMs) {}
 
@@ -15,4 +17,6 @@ unsigned TestResult::getPassed() const {
 
 unsigned long long TestResult::getDurationMs() const {
     return durationMs;
+}
+
 }
