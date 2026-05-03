@@ -1,4 +1,4 @@
-# Testing Library
+# Just Test It
 
 Simple C++ Library for writing unit tests. It has an easy to learn and use API for test cases, consisting of definition, assertion and execution. It is inspired by the test frameworks JUnit and GoogleTest.
 
