@@ -40,7 +40,7 @@ TEST_CASE(Vector, Palindrome) {
 		v[v.size() - 1 - i] = i;
 	}
 
-	ASSERT_ITERABLE_EQUAL(v.begin(), v.end(), v.rbegin(), v.rend(), "they are palindorme");
+	ASSERT_EQUAL_ITERABLE(v.begin(), v.end(), v.rbegin(), v.rend(), "they are palindorme");
 }
 
 TEST_CASE(Vector, NotPalindrome) {
@@ -49,7 +49,7 @@ TEST_CASE(Vector, NotPalindrome) {
 		v[i] = i;
 	}
 
-	ASSERT_ITERABLE_EQUAL(v.begin(), v.end(), v.rbegin(), v.rend(), "they are not palindromes");
+	ASSERT_EQUAL_ITERABLE(v.begin(), v.end(), v.rbegin(), v.rend(), "they are not palindromes");
 }
 
 TEST_CASE(Vector, EqualElementsAndDifferentLength) {
@@ -61,7 +61,7 @@ TEST_CASE(Vector, EqualElementsAndDifferentLength) {
 	std::vector<int> v2(v1);
 	v2.push_back(104);
 
-	ASSERT_ITERABLE_EQUAL(v1.begin(), v1.end(), v2.begin(), v2.end(),
+	ASSERT_EQUAL_ITERABLE(v1.begin(), v1.end(), v2.begin(), v2.end(),
 						  "collections with same elements but different size are not equal");
 }
 

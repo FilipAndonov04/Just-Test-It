@@ -3,4 +3,5 @@ target_sources(client PRIVATE
     StringTest.cpp
     Vector.cpp
     Exception.cpp
+    Float.cpp
 )

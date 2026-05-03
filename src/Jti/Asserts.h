@@ -4,16 +4,19 @@
 
 #include <string>
 #include <sstream>
+#include <cmath>
 
 namespace jti {
 
 #define ASSERT_TRUE(condition, msg) ASSERT_TRUE_IMPL(condition, msg)
 #define ASSERT_FALSE(condition, msg) ASSERT_TRUE_IMPL(!(condition), msg)
 #define ASSERT_EQUAL(expected, actual, msg) ASSERT_EQUAL_IMPL(expected, actual, msg)
+#define ASSERT_EQUAL_FLOAT(expected, actual, eps, msg) ASSERT_EQUAL_FLOAT_IMPL(expected, actual, eps, msg)
+#define ASSERT_EQUAL_ITERABLE(first1, last1, first2, last2, msg) ASSERT_EQUAL_ITERABLE_IMPL(first1, last1, first2, last2, msg)
 #define ASSERT_NOT_EQUAL(expected, actual, msg) ASSERT_NOT_EQUAL_IMPL(expected, actual, msg)
+#define ASSERT_NOT_EQUAL_FLOAT(expected, actual, eps, msg) ASSERT_NOT_EQUAL_FLOAT_IMPL(expected, actual, eps, msg)
 #define ASSERT_NULL(ptr, msg) ASSERT_TRUE((ptr) == nullptr, msg)
 #define ASSERT_NOT_NULL(ptr, msg) ASSERT_TRUE((ptr) != nullptr, msg)
-#define ASSERT_ITERABLE_EQUAL(first1, last1, first2, last2, msg) ASSERT_ITERABLE_EQUAL_IMPL(first1, last1, first2, last2, msg)
 #define ASSERT_THROW(exceptionType, function, msg) ASSERT_THROW_IMPL(exceptionType, function, msg)
 #define ASSERT_NO_THROW(function, msg) ASSERT_NO_THROW_IMPL(function, msg)
 #define ASSERT_ANY_THROW(function, msg) ASSERT_ANY_THROW_IMPL(function, msg)
@@ -50,7 +53,31 @@ std::string toString(const T& t);
 		} \
 	} while (false)
 
-#define ASSERT_ITERABLE_EQUAL_IMPL(first1, last1, first2, last2, msg) \
+#define ASSERT_EQUAL_FLOAT_IMPL(expected, actual, eps, msg) \
+	do { \
+		auto&& _expected = (expected); \
+		auto&& _actual = (actual); \
+		auto&& _eps = (eps); \
+		if (std::fabs(_expected - _actual) >= _eps) { \
+			throw jti::TestFailedException("Expected: " + jti::toString(_expected) + \
+											", Actual: " + jti::toString(_actual) + ", " + (msg) , \
+											__FILE__, __LINE__); \
+		} \
+	} while (false)
+
+#define ASSERT_NOT_EQUAL_FLOAT_IMPL(expected, actual, eps, msg) \
+	do { \
+		auto&& _expected = (expected); \
+		auto&& _actual = (actual); \
+		auto&& _eps = (eps); \
+		if (std::fabs(_expected - _actual) < _eps) { \
+			throw jti::TestFailedException("Expected: " + jti::toString(_expected) + \
+											", Actual: " + jti::toString(_actual) + ", " + (msg) , \
+											__FILE__, __LINE__); \
+		} \
+	} while (false)
+
+#define ASSERT_EQUAL_ITERABLE_IMPL(first1, last1, first2, last2, msg) \
 	do { \
 		auto&& _first1 = (first1); \
 		auto&& _last1 = (last1); \
