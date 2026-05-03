@@ -39,7 +39,7 @@ ASSERT_ANY_THROW(function, msg);
 
 The entry point of the test client program is the function `TEST_MAIN()`. 
 In it the client can specify which tests to run. 
-It can be skipped if the file `Test/EntryPoint.h` is included, in which case all tests will be run. 
+It can be skipped if the file `Jti/EntryPoint.h` is included, in which case all tests will be run. 
 
 Functions for running the tests:
 ```
@@ -48,7 +48,7 @@ bool jti::runSuiteTests(const char* testSuite);
 bool jti::runTestCase(const char* testSuite, const char* testCase);
 ```
 
-The success of all run tests can be checked with `Test::haveAllTestsPassed()`.
+The success of all run tests can be checked with `jti::haveAllTestsPassed()`.
 
 ## Testing Result
 
@@ -68,9 +68,9 @@ Screenshot of test results:
 
 A simple test program: 
 ```
-#include <Test/Test.h>
-#include <Test/Asserts.h>
-#include <Test/EntryPoint.h>
+#include <Jti/Test.h>
+#include <Jti/Asserts.h>
+#include <Jti/EntryPoint.h>
 
 #include "Box.h"
 
