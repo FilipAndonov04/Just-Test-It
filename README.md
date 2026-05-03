@@ -1,6 +1,8 @@
 # Just Test It
 
-Simple C++ Library for writing unit tests. It has an easy to learn and use API for test cases, consisting of definition, assertion and execution. It is inspired by the test frameworks JUnit and GoogleTest.
+Simple C++ Library for writing unit tests. It has an easy to learn and use API for test cases,
+consisting of definition, assertion and execution. 
+It is inspired by the test frameworks JUnit and GoogleTest.
 
 ## Test Cases
 
@@ -41,9 +43,9 @@ It can be skipped if the file `Test/EntryPoint.h` is included, in which case all
 
 Functions for running the tests:
 ```
-bool Test::runAllTests();
-bool Test::runSuiteTests(const char* testSuite);
-bool Test::runTestCase(const char* testSuite, const char* testCase);
+bool jti::runAllTests();
+bool jti::runSuiteTests(const char* testSuite);
+bool jti::runTestCase(const char* testSuite, const char* testCase);
 ```
 
 The success of all run tests can be checked with `Test::haveAllTestsPassed()`.
@@ -52,7 +54,8 @@ The success of all run tests can be checked with `Test::haveAllTestsPassed()`.
 
 The testing results are printed in the console. 
 They consist of success of cases and suites and their time duration. 
-On test case failure the following things are shown: assertion message, filename, line of the failed assertion and the expected value, if there was any. 
+On test case failure the following things are shown: assertion message, filename, 
+line of the failed assertion and the expected value, if there was any. 
 If an exception is thrown, the following things are shown: error message, filename and line of the test case. 
 
 The program returns `0` if all tests pass, `1` otherwise. 
