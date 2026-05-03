@@ -80,7 +80,7 @@ std::string toString(T&& t);
 		auto&& _func = (function); \
 		try { \
 			_func(); \
-		} catch (const exceptionType##& e) { \
+		} catch (const exceptionType##&) { \
 			break; \
 		} catch (...) { \
 			throw jti::TestFailedException(std::string("another type of exception was thrown, ") + \
