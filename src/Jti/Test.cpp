@@ -4,7 +4,7 @@
 #include "Jti/Impl/Plan/TestPlan.h"
 #include "Jti/Impl/Register/TestRegister.h"
 
-namespace Test {
+namespace jti {
 
 static bool allTestsPassed = true;
 

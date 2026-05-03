@@ -5,7 +5,7 @@
 #include <string>
 #include <sstream>
 
-namespace Test {
+namespace jti {
 
 #define ASSERT_TRUE(condition, msg) ASSERT_TRUE_IMPL(condition, msg)
 #define ASSERT_FALSE(condition, msg) ASSERT_TRUE_IMPL(!(condition), msg)
@@ -24,7 +24,7 @@ std::string toString(T&& t);
 #define ASSERT_TRUE_IMPL(condition, msg) \
 	do { \
 		if (!(condition)) { \
-			throw Test::TestFailedException((msg), __FILE__, __LINE__); \
+			throw jti::TestFailedException((msg), __FILE__, __LINE__); \
 		} \
 	} while (false)
 
@@ -33,8 +33,8 @@ std::string toString(T&& t);
 		auto&& _expected = (expected); \
 		auto&& _actual = (actual); \
 		if (!(_expected == _actual)) { \
-			throw Test::TestFailedException("Expected: " + Test::toString(_expected) + \
-											", Actual: " + Test::toString(_actual) + ", " + (msg) , \
+			throw jti::TestFailedException("Expected: " + jti::toString(_expected) + \
+											", Actual: " + jti::toString(_actual) + ", " + (msg) , \
 											__FILE__, __LINE__); \
 		} \
 	} while (false)
@@ -44,8 +44,8 @@ std::string toString(T&& t);
 		auto&& _expected = (expected); \
 		auto&& _actual = (actual); \
 		if (_expected == _actual) { \
-			throw Test::TestFailedException("Expected: " + Test::toString(_expected) + \
-											", Actual: " + Test::toString(_actual) + ", " + (msg) , \
+			throw jti::TestFailedException("Expected: " + jti::toString(_expected) + \
+											", Actual: " + jti::toString(_actual) + ", " + (msg) , \
 											__FILE__, __LINE__); \
 		} \
 	} while (false)
@@ -59,7 +59,7 @@ std::string toString(T&& t);
 		size_t _iteration = 0; \
 		while (_first1 != _last1 && _first2 != _last2) { \
 			if (!(*_first1 == *_first2)) { \
-				throw Test::TestFailedException("missmatch at " + std::to_string(_iteration) + \
+				throw jti::TestFailedException("missmatch at " + std::to_string(_iteration) + \
 												"th iteration, " + (msg), __FILE__, __LINE__); \
 			} \
 			++_first1; \
@@ -67,10 +67,10 @@ std::string toString(T&& t);
 			++_iteration; \
 		} \
 		if (_first1 != _last1) { \
-			throw Test::TestFailedException(std::string("first collection has more elements, ") + \
+			throw jti::TestFailedException(std::string("first collection has more elements, ") + \
 											(msg), __FILE__, __LINE__); \
 		} else if (_first2 != _last2) { \
-			throw Test::TestFailedException(std::string("first collection has less elements, ") + \
+			throw jti::TestFailedException(std::string("first collection has less elements, ") + \
 											(msg), __FILE__, __LINE__); \
 		} \
 	} while (false)
@@ -83,10 +83,10 @@ std::string toString(T&& t);
 		} catch (const exceptionType##& e) { \
 			break; \
 		} catch (...) { \
-			throw Test::TestFailedException(std::string("another type of exception was thrown, ") + \
+			throw jti::TestFailedException(std::string("another type of exception was thrown, ") + \
 											(msg), __FILE__, __LINE__); \
 		} \
-		throw Test::TestFailedException(std::string("expected exception was not thrown, ") + \
+		throw jti::TestFailedException(std::string("expected exception was not thrown, ") + \
 											(msg), __FILE__, __LINE__); \
 	} while (false)
 
@@ -96,7 +96,7 @@ std::string toString(T&& t);
 		try { \
 			_func(); \
 		} catch (...) { \
-			throw Test::TestFailedException(std::string("exception was thrown, ") + \
+			throw jti::TestFailedException(std::string("exception was thrown, ") + \
 											(msg), __FILE__, __LINE__); \
 		} \
 	} while (false) 
@@ -109,7 +109,7 @@ std::string toString(T&& t);
 		} catch (...) { \
 			break; \
 		} \
-		throw Test::TestFailedException(std::string("exception was not thrown, ") + \
+		throw jti::TestFailedException(std::string("exception was not thrown, ") + \
 											(msg), __FILE__, __LINE__); \
 	} while (false)
 

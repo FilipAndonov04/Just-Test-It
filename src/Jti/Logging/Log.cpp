@@ -1,6 +1,6 @@
 #include "Log.hpp"
 
-namespace Test {
+namespace jti {
 
 static unsigned logTabs = 0;
 

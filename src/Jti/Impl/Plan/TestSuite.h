@@ -4,7 +4,7 @@
 
 #include "Jti/Impl/Plan/TestCase.h"
 
-namespace Test {
+namespace jti {
 
 class TestSuite {
 public:

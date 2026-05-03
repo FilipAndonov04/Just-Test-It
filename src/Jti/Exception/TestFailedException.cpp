@@ -1,6 +1,6 @@
 #include "TestFailedException.h"
 
-namespace Test {
+namespace jti {
 
 static const char* getFilename(const char* path);
 

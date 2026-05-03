@@ -4,7 +4,7 @@
 #include "Jti/Exception/TestFailedException.h"
 #include "Jti/Impl/Timer/TestTimer.h"
 
-namespace Test {
+namespace jti {
 
 TestCase::TestCase(const char* name, void (*impl)())
     : name(name), impl(impl) {}

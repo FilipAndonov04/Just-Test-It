@@ -1,6 +1,6 @@
 #include "TestResult.h"
 
-namespace Test {
+namespace jti {
 
 TestResult::TestResult(unsigned passed, unsigned long long durationMs) 
     : passed(passed), durationMs(durationMs) {}

@@ -2,7 +2,7 @@
 
 #include "Jti/Impl/Plan/TestResult.h"
 
-namespace Test {
+namespace jti {
 
 class TestCase {
 public:

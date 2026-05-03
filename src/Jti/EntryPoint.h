@@ -3,5 +3,5 @@
 #include "Jti/Test.h"
 
 TEST_MAIN() {
-	Test::runAllTests();
+	jti::runAllTests();
 }

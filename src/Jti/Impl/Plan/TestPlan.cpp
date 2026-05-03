@@ -3,7 +3,7 @@
 #include "Jti/Logging/Log.hpp"
 #include "Jti/Impl/Timer/TestTimer.h"
 
-namespace Test {
+namespace jti {
 
 void TestPlan::addTestCase(const char* suiteName, const char* caseName, void(*caseImpl)()) {
     for (auto& suite : suites) {

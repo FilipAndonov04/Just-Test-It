@@ -2,7 +2,7 @@
 
 #include <cstdio>
 
-namespace Test {
+namespace jti {
 
 template <typename... Ts>
 inline void log(const char* fmt, const Ts&... ts) {

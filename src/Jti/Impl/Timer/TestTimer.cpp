@@ -1,6 +1,6 @@
 #include "TestTimer.h"
 
-namespace Test {
+namespace jti {
 
 TestTimer::TestTimer() 
     : startTick(std::chrono::steady_clock::now()) {}

@@ -2,7 +2,7 @@
 
 #include <chrono>
 
-namespace Test {
+namespace jti {
 
 class TestTimer {
 public:

@@ -2,7 +2,7 @@
 
 #include "Jti/Impl/Plan/TestSuite.h"
 
-namespace Test {
+namespace jti {
 
 class TestPlan {
 public:

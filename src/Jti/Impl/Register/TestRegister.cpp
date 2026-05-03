@@ -2,7 +2,7 @@
 
 #include "Jti/Impl/Plan/TestPlan.h"
 
-namespace Test {
+namespace jti {
 
 TestPlan& getTestRegister() {
     static TestPlan instance;

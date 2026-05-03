@@ -3,7 +3,7 @@
 #include "Jti/Logging/Log.hpp"
 #include "Jti/Impl/Timer/TestTimer.h"
 
-namespace Test {
+namespace jti {
 
 TestSuite::TestSuite(const char* name) 
     : name(name) {}
