@@ -26,10 +26,12 @@ If any assert fails, the test stops execution at that point and fails.
 ASSERT_TRUE(condition, msg);
 ASSERT_FALSE(condition, msg);
 ASSERT_EQUAL(expected, actual, msg);
+ASSERT_EQUAL_FLOAT(expected, actual, eps, msg);
+ASSERT_EQUAL_ITERABLE(first1, last1, first2, last2, msg);
 ASSERT_NOT_EQUAL(expected, actual, msg);
+ASSERT_NOT_EQUAL_FLOAT(expected, actual, eps, msg);
 ASSERT_NULL(ptr, msg);
 ASSERT_NOT_NULL(ptr, msg);
-ASSERT_ITERABLE_EQUAL(first1, last1, first2, last2, msg);
 ASSERT_THROWS(exceptionType, function, msg);
 ASSERT_DOES_NOT_THROW(function, msg);
 ASSERT_ANY_THROW(function, msg);
