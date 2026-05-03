@@ -19,7 +19,7 @@ namespace jti {
 #define ASSERT_ANY_THROW(function, msg) ASSERT_ANY_THROW_IMPL(function, msg)
 
 template <typename T>
-std::string toString(T&& t);
+std::string toString(const T& t);
 
 #define ASSERT_TRUE_IMPL(condition, msg) \
 	do { \
@@ -114,7 +114,7 @@ std::string toString(T&& t);
 	} while (false)
 
 template <typename T>
-std::string toString(T&& t) {
+inline std::string toString(const T& t) {
 	std::ostringstream ss;
 	ss << t;
 	return ss.str();
