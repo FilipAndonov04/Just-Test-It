@@ -5,6 +5,37 @@
 
 namespace jti {
 
+/*
+ * Run all tests.
+ * 
+ * @return True if all the tests passed, false otherwise.
+ */
+bool runAllTests();
+
+/*
+ * Run the tests in a suite.
+ * 
+ * @param testSuite - The suite's name.
+ * @return True if all the suite tests passed, false otherwise.
+ */
+bool runSuiteTests(const char* testSuite);
+
+/*
+ * Run a test case.
+ *
+ * @param testSuite - The suite's name.
+ * @param testCase - The case's name.
+ * @return True if the case passed, false otherwise.
+ */
+bool runTestCase(const char* testSuite, const char* testCase);
+
+/*
+ * Check if all run tests have passed.
+ *
+ * @return True if all run tests have passed, false otherwise.
+ */
+bool haveAllTestsPassed();
+
 #define TEST_CASE(suite, name) \
 	void test##suite##name(); \
 	void test##suite##name##_structure() { \
@@ -29,11 +60,5 @@ namespace jti {
 		return jti::haveAllTestsPassed() ? EXIT_SUCCESS : EXIT_FAILURE; \
 	} \
 	void main_impl()
-
-bool runAllTests();
-bool runSuiteTests(const char* testSuite);
-bool runTestCase(const char* testSuite, const char* testCase);
-
-bool haveAllTestsPassed();
 
 }
