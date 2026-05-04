@@ -4,9 +4,9 @@
 
 namespace jti {
 
-class TestTimer {
+class Timer {
 public:
-	TestTimer();
+	Timer();
 
 	unsigned long long getTimePassedMs() const;
 

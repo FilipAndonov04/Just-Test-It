@@ -1,7 +1,6 @@
 #include "TestSuite.h"
 
-#include "Jti/Logging/Log.hpp"
-#include "Jti/Impl/Timer/TestTimer.h"
+#include "Jti/Impl/Logging/Log.hpp"
 
 namespace jti {
 

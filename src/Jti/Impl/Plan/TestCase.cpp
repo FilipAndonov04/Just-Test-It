@@ -1,8 +1,8 @@
 #include "TestCase.h"
 
-#include "Jti/Logging/Log.hpp"
+#include "Jti/Impl/Logging/Log.hpp"
+#include "Jti/Impl/Timer/Timer.h"
 #include "Jti/Exception/TestFailedException.h"
-#include "Jti/Impl/Timer/TestTimer.h"
 
 namespace jti {
 
@@ -14,7 +14,7 @@ const char* TestCase::getName() const {
 }
 
 TestResult TestCase::run() const {
-    TestTimer timer;
+    Timer timer;
     try {
         impl();
         auto duration = timer.getTimePassedMs();
