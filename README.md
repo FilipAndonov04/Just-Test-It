@@ -71,7 +71,7 @@ Screenshot of test results:
 A simple test program: 
 ```
 #include <Jti/Test.h>
-#include <Jti/Asserts.h>
+#include <Jti/Assert.h>
 #include <Jti/EntryPoint.h>
 
 #include "Box.h"

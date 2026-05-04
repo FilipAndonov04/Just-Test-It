@@ -1,7 +1,7 @@
 target_sources(jti PRIVATE
     Test.h
     Test.cpp
-    Asserts.h
+    Assert.h
     EntryPoint.h
 )
 

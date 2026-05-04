@@ -1,5 +1,5 @@
 #include "Jti/Test.h"
-#include "Jti/Asserts.h"
+#include "Jti/Assert.h"
 
 TEST_CASE(Ptr, NotNull) {
 	int* ptr = nullptr;
