@@ -14,3 +14,4 @@ target_link_libraries(box-test PRIVATE box-production)
 target_link_libraries(box-test PRIVATE jti)
 
 add_subdirectory(src)
+add_subdirectory(example)
