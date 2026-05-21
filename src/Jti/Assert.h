@@ -87,7 +87,7 @@ std::string toString(const T& t);
 		while (_first1 != _last1 && _first2 != _last2) { \
 			if (!(*_first1 == *_first2)) { \
 				throw jti::TestFailedException("missmatch at " + std::to_string(_iteration) + \
-												"th iteration, " + (msg), __FILE__, __LINE__); \
+												"th element, " + (msg), __FILE__, __LINE__); \
 			} \
 			++_first1; \
 			++_first2; \
