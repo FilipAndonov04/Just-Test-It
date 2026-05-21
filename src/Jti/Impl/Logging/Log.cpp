@@ -40,7 +40,7 @@ void setConsoleColour(ConsoleColour colour) {
 		break;
 	}
 
-	std::printf(colourCode);
+	log(colourCode);
 }
 
 void resetConsoleColour() {
