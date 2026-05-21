@@ -76,10 +76,10 @@ A simple test program:
 
 #include "Box.h"
 
-TEST_CASE(Box, DefaultConstructor) {
+TEST_CASE(Box, EmptyOnDefaultConstruction) {
     Box box;
 
-    ASSERT_TRUE(box.isEmpty(), "box should be empty on construction");
+    ASSERT_TRUE(box.isEmpty(), "box should be empty on default contruction");
 }
 ```
 
