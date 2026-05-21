@@ -1,5 +1,8 @@
 #include "Box.h"
 
+Box::Box(std::string content)
+    : content(std::move(content)) {}
+
 bool Box::isEmpty() const {
     return content.empty();
 }
