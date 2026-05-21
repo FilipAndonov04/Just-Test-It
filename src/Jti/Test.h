@@ -8,7 +8,7 @@ namespace jti {
 /*
  * Run all tests.
  * 
- * @return True if all the tests passed, false otherwise.
+ * @return True if all run tests passed, false otherwise.
  */
 bool runAllTests();
 
@@ -16,7 +16,7 @@ bool runAllTests();
  * Run the tests in a suite.
  * 
  * @param testSuite - The suite's name.
- * @return True if all the suite tests passed, false otherwise.
+ * @return True if all run tests passed, false otherwise.
  */
 bool runSuiteTests(const char* testSuite);
 
@@ -25,12 +25,12 @@ bool runSuiteTests(const char* testSuite);
  *
  * @param testSuite - The suite's name.
  * @param testCase - The case's name.
- * @return True if the case passed, false otherwise.
+ * @return True if the test passed, false otherwise.
  */
 bool runTestCase(const char* testSuite, const char* testCase);
 
 /*
- * Check if all run tests have passed.
+ * Check if all run tests up to this moment have passed.
  *
  * @return True if all run tests have passed, false otherwise.
  */
