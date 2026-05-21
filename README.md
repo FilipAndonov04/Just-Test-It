@@ -11,7 +11,7 @@ A test case has a name and a suite.
 Suites are used to group test cases.
 Test cases are automatically registered on definition. 
 
-```
+```cpp
 TEST_CASE(suite, name) {
     ...
 }
@@ -22,7 +22,7 @@ TEST_CASE(suite, name) {
 Asserts are used to validate the test case. 
 If any assert fails, the test stops execution at that point and fails. 
 
-```
+```cpp
 ASSERT_TRUE(condition, msg);
 ASSERT_FALSE(condition, msg);
 ASSERT_EQUAL(expected, actual, msg);
@@ -44,7 +44,7 @@ In it the client can specify which tests to run.
 It can be skipped if the file `Jti/EntryPoint.h` is included, in which case all tests will be run. 
 
 Functions for running the tests:
-```
+```cpp
 bool jti::runAllTests();
 bool jti::runSuiteTests(const char* testSuite);
 bool jti::runTestCase(const char* testSuite, const char* testCase);
@@ -69,7 +69,7 @@ Screenshot of test results:
 ## Example Client Program
 
 A simple test program: 
-```
+```cpp
 #include <Jti/Test.h>
 #include <Jti/Assert.h>
 #include <Jti/EntryPoint.h>
