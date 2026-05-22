@@ -2,7 +2,7 @@
 
 #include "Impl/Logging/Log.hpp"
 #include "Impl/Plan/TestPlan.h"
-#include "Jti/Register/TestRegister.h"
+#include "Register/TestRegister.h"
 
 namespace jti {
 
