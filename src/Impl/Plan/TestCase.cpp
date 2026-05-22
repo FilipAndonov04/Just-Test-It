@@ -1,4 +1,4 @@
-#include "TestCase.h"
+#include "Jti/Impl/Plan/TestCase.h"
 
 #include "Jti/Impl/Logging/Log.hpp"
 #include "Jti/Impl/Timer/Timer.h"

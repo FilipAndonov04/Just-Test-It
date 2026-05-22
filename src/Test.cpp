@@ -1,4 +1,4 @@
-#include "Test.h"
+#include "Jti/Test.h"
 
 #include "Jti/Impl/Logging/Log.hpp"
 #include "Jti/Impl/Plan/TestPlan.h"

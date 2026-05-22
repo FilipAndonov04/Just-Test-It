@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.13)
 project(JustTestIt)
 
 add_library(jti)
-target_include_directories(jti PUBLIC src)
+target_include_directories(jti PUBLIC include PRIVATE src)
 
 add_executable(client)
 target_link_libraries(client PRIVATE jti)

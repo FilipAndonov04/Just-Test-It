@@ -1,4 +1,4 @@
-#include "TestFailedException.h"
+#include "Jti/Exception/TestFailedException.h"
 
 namespace jti {
 
