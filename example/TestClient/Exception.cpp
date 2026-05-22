@@ -1,5 +1,5 @@
-#include "Jti/Test.h"
-#include "Jti/Assert.h"
+#include "Jti/Test.hpp"
+#include "Jti/Assert.hpp"
 
 #include <exception>
 

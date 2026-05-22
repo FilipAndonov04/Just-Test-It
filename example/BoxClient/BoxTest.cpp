@@ -1,8 +1,8 @@
-#include <Jti/Test.h>
-#include <Jti/Assert.h>
-#include <Jti/EntryPoint.h>
+#include <Jti/Test.hpp>
+#include <Jti/Assert.hpp>
+#include <Jti/EntryPoint.hpp>
 
-#include "Box.h"
+#include "Box.hpp"
 
 TEST_CASE(Box, EmptyOnDefaultConstruction) {
 	Box box;

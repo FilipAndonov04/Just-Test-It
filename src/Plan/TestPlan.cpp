@@ -1,4 +1,4 @@
-#include "Plan/TestPlan.h"
+#include "Plan/TestPlan.hpp"
 
 #include "Logging/Log.hpp"
 

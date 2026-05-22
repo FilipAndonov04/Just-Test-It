@@ -1,5 +1,5 @@
 target_sources(jti PRIVATE
-    TestRegister.h
+    TestRegister.hpp
     TestRegister.cpp
     TestRegistration.cpp
 )

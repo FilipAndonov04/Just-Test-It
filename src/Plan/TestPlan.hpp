@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Plan/TestSuite.h"
+#include "Plan/TestSuite.hpp"
 
 namespace jti {
 

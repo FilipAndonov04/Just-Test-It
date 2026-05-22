@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Jti/Register/TestRegistration.h"
-#include "Jti/Exception/TestFailedException.h"
+#include "Jti/Register/TestRegistration.hpp"
+#include "Jti/Exception/TestFailedException.hpp"
 
 namespace jti {
 

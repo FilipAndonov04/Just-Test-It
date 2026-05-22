@@ -1,10 +1,10 @@
 target_sources(jti PRIVATE
-    TestPlan.h
+    TestPlan.hpp
     TestPlan.cpp
-    TestSuite.h
+    TestSuite.hpp
     TestSuite.cpp
-    TestCase.h
+    TestCase.hpp
     TestCase.cpp
-    TestResult.h
+    TestResult.hpp
     TestResult.cpp
 )

@@ -1,4 +1,4 @@
-#include "Box.h"
+#include "Box.hpp"
 
 Box::Box(std::string content)
     : content(std::move(content)) {}

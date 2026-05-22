@@ -1,8 +1,8 @@
-#include "Jti/Test.h"
+#include "Jti/Test.hpp"
 
 #include "Logging/Log.hpp"
-#include "Plan/TestPlan.h"
-#include "Register/TestRegister.h"
+#include "Plan/TestPlan.hpp"
+#include "Register/TestRegister.hpp"
 
 namespace jti {
 

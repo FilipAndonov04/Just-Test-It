@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Exception/TestFailedException.h"
+#include "Exception/TestFailedException.hpp"
 
 #include <string>
 #include <sstream>

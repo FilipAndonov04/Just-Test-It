@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Jti/Test.h"
+#include "Jti/Test.hpp"
 
 TEST_MAIN() {
 	jti::runAllTests();
