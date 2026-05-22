@@ -1,5 +1,5 @@
-#include "Jti/Test.hpp"
-#include "Jti/Assert.hpp"
+#include <Jti/Test.hpp>
+#include <Jti/Assert.hpp>
 
 constexpr float EPSILON = 1e-3;
 
