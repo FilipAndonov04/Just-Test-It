@@ -1,4 +1,4 @@
-#include "Jti/Impl/Timer/Timer.h"
+#include "Impl/Timer/Timer.h"
 
 namespace jti {
 

@@ -1,6 +1,6 @@
-#include "Jti/Impl/Plan/TestSuite.h"
+#include "Impl/Plan/TestSuite.h"
 
-#include "Jti/Impl/Logging/Log.hpp"
+#include "Impl/Logging/Log.hpp"
 
 namespace jti {
 

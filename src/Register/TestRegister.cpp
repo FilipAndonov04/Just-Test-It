@@ -1,6 +1,6 @@
 #include "Jti/Register/TestRegister.h"
 
-#include "Jti/Impl/Plan/TestPlan.h"
+#include "Impl/Plan/TestPlan.h"
 
 namespace jti {
 

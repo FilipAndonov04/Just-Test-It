@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Jti/Impl/Plan/TestResult.h"
+#include "Impl/Plan/TestResult.h"
 
 namespace jti {
 

@@ -1,4 +1,4 @@
-#include "Jti/Impl/Logging/Log.hpp"
+#include "Impl/Logging/Log.hpp"
 
 namespace jti {
 
