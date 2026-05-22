@@ -1,4 +1,4 @@
-target_sources(client PRIVATE
+target_sources(usage-examples PRIVATE
     Main.cpp
     StringTest.cpp
     Vector.cpp

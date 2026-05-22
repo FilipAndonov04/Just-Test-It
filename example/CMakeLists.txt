@@ -1,2 +1,2 @@
-add_subdirectory(TestClient)
+add_subdirectory(UsageExamples)
 add_subdirectory(BoxClient)
