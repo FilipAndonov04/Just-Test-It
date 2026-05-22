@@ -1,5 +1,5 @@
 target_sources(box-production PRIVATE
-    "Box.hpp"
+    Box.hpp
     Box.cpp
 )
 
