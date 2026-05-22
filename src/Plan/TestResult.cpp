@@ -1,4 +1,4 @@
-#include "Impl/Plan/TestResult.h"
+#include "Plan/TestResult.h"
 
 namespace jti {
 

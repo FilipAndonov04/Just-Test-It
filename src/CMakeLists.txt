@@ -4,4 +4,6 @@ target_sources(jti PRIVATE
 
 add_subdirectory(Exception)
 add_subdirectory(Register)
-add_subdirectory(Impl)
+add_subdirectory(Plan)
+add_subdirectory(Logging)
+add_subdirectory(Timer)

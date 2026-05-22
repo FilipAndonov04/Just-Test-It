@@ -2,7 +2,7 @@
 
 #include <vector>
 
-#include "Impl/Plan/TestCase.h"
+#include "Plan/TestCase.h"
 
 namespace jti {
 

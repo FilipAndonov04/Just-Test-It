@@ -1,7 +1,7 @@
-#include "Impl/Plan/TestCase.h"
+#include "Plan/TestCase.h"
 
-#include "Impl/Logging/Log.hpp"
-#include "Impl/Timer/Timer.h"
+#include "Logging/Log.hpp"
+#include "Timer/Timer.h"
 #include "Jti/Exception/TestFailedException.h"
 
 namespace jti {

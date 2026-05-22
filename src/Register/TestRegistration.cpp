@@ -1,7 +1,7 @@
 #include "Jti/Register/TestRegistration.h"
 
 #include "Register/TestRegister.h"
-#include "Impl/Plan/TestPlan.h"
+#include "Plan/TestPlan.h"
 
 namespace jti {
 
