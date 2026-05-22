@@ -21,8 +21,12 @@ namespace jti {
 #define ASSERT_NO_THROW(function, msg) ASSERT_NO_THROW_IMPL(function, msg)
 #define ASSERT_ANY_THROW(function, msg) ASSERT_ANY_THROW_IMPL(function, msg)
 
+namespace impl {
+
 template <typename T>
 std::string toString(const T& t);
+
+}
 
 #define ASSERT_TRUE_IMPL(condition, msg) \
 	do { \
@@ -36,8 +40,8 @@ std::string toString(const T& t);
 		auto&& _expected = (expected); \
 		auto&& _actual = (actual); \
 		if (!(_expected == _actual)) { \
-			throw jti::TestFailedException("Expected: " + jti::toString(_expected) + \
-											", Actual: " + jti::toString(_actual) + ", " + (msg) , \
+			throw jti::TestFailedException("Expected: " + jti::impl::toString(_expected) + \
+											", Actual: " + jti::impl::toString(_actual) + ", " + (msg) , \
 											__FILE__, __LINE__); \
 		} \
 	} while (false)
@@ -47,8 +51,8 @@ std::string toString(const T& t);
 		auto&& _expected = (expected); \
 		auto&& _actual = (actual); \
 		if (_expected == _actual) { \
-			throw jti::TestFailedException("Expected: " + jti::toString(_expected) + \
-											", Actual: " + jti::toString(_actual) + ", " + (msg) , \
+			throw jti::TestFailedException("Expected: " + jti::impl::toString(_expected) + \
+											", Actual: " + jti::impl::toString(_actual) + ", " + (msg) , \
 											__FILE__, __LINE__); \
 		} \
 	} while (false)
@@ -59,8 +63,8 @@ std::string toString(const T& t);
 		auto&& _actual = (actual); \
 		auto&& _eps = (eps); \
 		if (std::fabs(_expected - _actual) >= _eps) { \
-			throw jti::TestFailedException("Expected: " + jti::toString(_expected) + \
-											", Actual: " + jti::toString(_actual) + ", " + (msg) , \
+			throw jti::TestFailedException("Expected: " + jti::impl::toString(_expected) + \
+											", Actual: " + jti::impl::toString(_actual) + ", " + (msg) , \
 											__FILE__, __LINE__); \
 		} \
 	} while (false)
@@ -71,8 +75,8 @@ std::string toString(const T& t);
 		auto&& _actual = (actual); \
 		auto&& _eps = (eps); \
 		if (std::fabs(_expected - _actual) < _eps) { \
-			throw jti::TestFailedException("Expected: " + jti::toString(_expected) + \
-											", Actual: " + jti::toString(_actual) + ", " + (msg) , \
+			throw jti::TestFailedException("Expected: " + jti::impl::toString(_expected) + \
+											", Actual: " + jti::impl::toString(_actual) + ", " + (msg) , \
 											__FILE__, __LINE__); \
 		} \
 	} while (false)
@@ -140,11 +144,15 @@ std::string toString(const T& t);
 											(msg), __FILE__, __LINE__); \
 	} while (false)
 
+namespace impl {
+
 template <typename T>
 inline std::string toString(const T& t) {
 	std::ostringstream ss;
 	ss << t;
 	return ss.str();
+}
+
 }
 
 }
