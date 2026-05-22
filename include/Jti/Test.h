@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Jti/Impl/Register/TestRegistration.h"
+#include "Jti/Register/TestRegistration.h"
 #include "Jti/Exception/TestFailedException.h"
 
 namespace jti {

@@ -3,4 +3,5 @@ target_sources(jti PRIVATE
 )
 
 add_subdirectory(Exception)
+add_subdirectory(Register)
 add_subdirectory(Impl)

@@ -1,4 +1,4 @@
-#include "Jti/Impl/Register/TestRegister.h"
+#include "Jti/Register/TestRegister.h"
 
 #include "Jti/Impl/Plan/TestPlan.h"
 
